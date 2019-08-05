@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		97BDFAEF22F8016600AFAB96 /* NetStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 97BDFAED22F8016600AFAB96 /* NetStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97BDFAF722F8018600AFAB96 /* NetStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BDFAF622F8018600AFAB96 /* NetStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		97BDFAEA22F8016600AFAB96 /* NetStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BDFAED22F8016600AFAB96 /* NetStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetStatus.h; sourceTree = "<group>"; };
 		97BDFAEE22F8016600AFAB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97BDFAF622F8018600AFAB96 /* NetStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +48,19 @@
 		97BDFAEC22F8016600AFAB96 /* NetStatus */ = {
 			isa = PBXGroup;
 			children = (
+				97BDFAF522F8017900AFAB96 /* Source */,
 				97BDFAED22F8016600AFAB96 /* NetStatus.h */,
 				97BDFAEE22F8016600AFAB96 /* Info.plist */,
 			);
 			path = NetStatus;
+			sourceTree = "<group>";
+		};
+		97BDFAF522F8017900AFAB96 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				97BDFAF622F8018600AFAB96 /* NetStatus.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +106,7 @@
 				TargetAttributes = {
 					97BDFAE922F8016600AFAB96 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97BDFAF722F8018600AFAB96 /* NetStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +270,7 @@
 		97BDFAF322F8016600AFAB96 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -271,9 +285,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HaeSeongPark.NetStatus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhino.NetStatus;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -281,6 +297,7 @@
 		97BDFAF422F8016600AFAB96 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -295,9 +312,10 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = HaeSeongPark.NetStatus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rhino.NetStatus;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
